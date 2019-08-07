@@ -1,4 +1,9 @@
 # Starter pipeline
+- task: IISWebAppDeploymentOnMachineGroup@0
+  inputs:
+    WebSiteName: 'Prueba2.1'
+    VirtualApplication: 'Apache'
+    Package: '$(System.DefaultWorkingDirectory)\**\*.zip'
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '$(Build.BinariesDirectory)'
